@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Dorck Blog",
+  "short_name": "Dorck Blog",
+  "description": "App Dev & Freelance Thinker，Hacker Growth.",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",
