@@ -103,28 +103,28 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "乱序（Midare）",
-        href: "http://mida.re/"
+        title: "Jakewharton",
+        href: "https://jakewharton.com/blog/"
     },{
-        title: "Sherry Woo",
-        href: "https://sherrywoo.me/"
+        title: "Gityuan",
+        href: "http://gityuan.com/"
     },{
-        title: "Kun Qian",
-        href: "http://kunq.me"
+        title: "维术",
+        href: "http://weishu.me/"
     },{
-        title: "Ebn Zhang",
-        href: "http://ebnbin.com/"
+        title: "wanandroid",
+        href: "https://www.wanandroid.com/"
     },{
-        title: "SmdCn",
-        href: "http://blog.smdcn.net"
+        title: "武培轩",
+        href: "https://www.cnblogs.com/wupeixuan"
     },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
+        title: "Trinea",
+        href: "https://www.trinea.cn/"
     },{
-        title: "DHong Say",
-        href: "http://dhong.co"
+        title: "Chris Banes",
+        href: "https://chris.banes.dev/"
     },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "胡凯",
+        href: "https://www.hukai.me/category/android"
     }
 ]
