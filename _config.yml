@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: moosphon@gmail.com
 description: "修技术之道，日三省吾身 | App Dev & Freelance Thinker，Hacker Growth | 这里是 @道轲(Dorck) 的个人博客，与你一起探寻世界。"
 keyword: "Dorck, 道轲, moosphan, 道轲的博客, Dorck Blog, Android, 技术, 博客, 个人博客, 专栏, 互联网, 设计, 黑客, 人生观, 设计"
-url: "https://moosphan.github.io/blog"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://moosphan.github.io"              # your host, for absolute URL
+baseurl: "/blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
