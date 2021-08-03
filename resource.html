@@ -1,0 +1,14 @@
+---
+layout: page
+title: "Share"
+description: "学习资料 | 技术教程 | 感悟"
+header-img: "img/about-bg-walle.jpg"
+permalink: /resource.html
+---
+
+<!-- 加载md文件 -->
+
+<div class="post-container">
+    {% capture resource_share %}{% include resource/resource_share.md %}{% endcapture %}
+    {{ resource_share | markdownify }}
+</div>

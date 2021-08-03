@@ -14,7 +14,7 @@ future: true
 # SNS settings
 RSS: false
 #weibo_username:     Dorck
-zhihu_username:     Dorck
+zhihu_username:     yi-chang-mi-li-de-meng
 github_username:    Moosphan
 twitter_username:   Dorck
 #facebook_username:  Dorck
@@ -126,5 +126,8 @@ friends: [
     },{
         title: "胡凯",
         href: "https://www.hukai.me/category/android"
+    },{
+        title: "技术小黑屋",
+        href: "https://droidyue.com/"
     }
 ]
