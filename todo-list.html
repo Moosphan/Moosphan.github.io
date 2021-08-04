@@ -1,0 +1,16 @@
+---
+layout: page
+title: "Todo"
+hide-in-nav: true
+description: "短期规划和进度更新"
+header-img: "img/about-bg-walle.jpg"
+permalink: /todo-list.html
+---
+
+<!-- 加载md文件 -->
+
+<div class="post-container">
+    {% capture todo_list %}{% include todos/todo_list.md %}{% endcapture %}
+    {{ todo_list | markdownify }}
+</div>
+
