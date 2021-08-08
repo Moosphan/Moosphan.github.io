@@ -7,7 +7,7 @@
 | Android 官方协程教程        | <https://developer.android.com/kotlin/coroutines?hl=zh-cn>   | 协程     |
 | Android 官方Hilt教程        | <https://developer.android.com/codelabs/android-hilt#0>      | 依赖注入 |
 | Android 官方ViewBinding教程 | <https://developer.android.com/topic/libraries/view-binding#kotlin> | Binding  |
-|                             |                                                              |          |
+| AndroidStandardDevelop      | <https://github.com/Blankj/AndroidStandardDevelop>           | 开发规范 |
 
 #### 1.2 Kotlin 相关
 
