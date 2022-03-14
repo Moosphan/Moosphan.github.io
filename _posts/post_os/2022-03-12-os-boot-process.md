@@ -104,7 +104,6 @@ Boot Loader 有若干种，其中 Grub、Lilo 和 spfdisk 是常见的 loader，
 
 ### 相关参考
 
-- 清华大学操作系统原理课程
-- https://wiki.deepin.org/wiki/%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B
+- [清华大学操作系统原理课程](https://wiki.deepin.org/wiki/%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B)
 - https://www.jianshu.com/p/26e184605952
-- https://437436999.github.io/2020/02/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/
+- [操作系统启动过程笔记](https://437436999.github.io/2020/02/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)

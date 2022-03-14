@@ -1,6 +1,6 @@
 # Site settings
-title: Dorck Blog
-SEOTitle: 道轲的博客 | Dorck Blog
+title: Dorck's Blog
+SEOTitle: 道轲的博客 | Dorck's Blog
 header-img: img/home-bg.jpg
 email: moosphon@gmail.com
 description: "修技术之道，日三省吾身 | App Dev & Freelance Thinker，Hacker Growth | 这里是 @道轲(Dorck) 的个人博客，与你一起探寻世界。"
@@ -14,9 +14,9 @@ future: true
 # SNS settings
 RSS: false
 #weibo_username:     Dorck
-zhihu_username:     yi-chang-mi-li-de-meng
+# zhihu_username:     yi-chang-mi-li-de-meng
 github_username:    Moosphan
-twitter_username:   Dorck
+# twitter_username:   Dorck
 #facebook_username:  Dorck
 #linkedin_username:  firstname-lastname-idxxxx
 
