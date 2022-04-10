@@ -1,6 +1,6 @@
 ---
 layout:     post
-title: "地址空间与内存分配"
+title: "操作系统地址空间与内存分配"
 date: 2022-03-13 14:02:12
 author:     "Dorck"
 catalog: false
