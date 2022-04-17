@@ -42,6 +42,25 @@ tags:
 - 埋点技术
 - 日志工具：[BLog](https://github.com/kaedea/b-log/blob/master/README_CN.md)
 
+##### 性能优化
+
+常见方法论：[Android 性能调优的技术优化点](https://kaedea.com/2015/11/12/android-best-performance-points/)
+
+- APM（Application-preference-monitor）
+  - [腾讯 Matrix](https://github.com/Tencent/matrix)
+  - [Facebook Battery-Metrics](https://github.com/facebookincubator/Battery-Metrics)
+  - [电量优化原理分析](https://kaedea.com/2022/01/20/android-apm-battery-canary/)
+
+##### 插件化
+
+参考系列文章：<https://kaedea.com/categories/Android/>
+
+开源方案参考：
+
+- [android-dynamic-loading](https://github.com/kaedea/android-dynamical-loading)
+- [Tencent热修复方案](https://github.com/Tencent/tinker)
+- [dynamic-load-apk](https://github.com/singwhatiwanna/dynamic-load-apk)
+
 ### 数据结构算法
 
 - 递归的宏观和微观世界
