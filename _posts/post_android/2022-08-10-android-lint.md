@@ -452,7 +452,7 @@ Lint 检查的实质是对代码的 AST（Abstract Syntax Tree，即抽象语法
 
 ### 相关参考
 
-- [*https://developer.android.google.cn/studio/write/lint*](https://developer.android.google.cn/studio/write/lint)
+- https://developer.android.google.cn/studio/write/lint
 - [*googlesamples/android-custom-lint-rules*](https://github.com/googlesamples/android-custom-lint-rules)
 - [*美团/Android自定义lint实践*](https://tech.meituan.com/2016/03/21/android-custom-lint.html)
 - [*android-custom-lint-user-guide*](https://googlesamples.github.io/android-custom-lint-rules/api-guide.html)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gradle手札系列之命令行接口一览"
+title: "Gradle手札之命令行接口一览"
 date: 2022-06-30 18:02:09
 author:     "Dorck"
 catalog: false
