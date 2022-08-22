@@ -56,14 +56,33 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-
+# Comment platforms
 
 # Disqus settings
-disqus_username: Dorck
+#disqus_username: Dorck
 
 # Netease settings
 netease_comment: false
 
+# GitTalk comment settings
+gitalk:
+enable: true
+owner: Moosphan
+repo: moosphan.github.io
+clientID: 4dd5cc4395d35d50d68b
+clientSecret: 70898a0a9874bce8ff2dbcf62af1d2aff2184ab3
+admin: Moosphan
+
+# Giscus comment settings
+giscus:
+  repo: "Moosphan/Moosphan.github.io"
+  category: "Comments"
+  repo_id: "MDEwOlJlcG9zaXRvcnkzOTE1NzQ5OTU="
+  category_id: "DIC_kwDOF1b1084CQ-Ty"
+  mapping: 'pathname'
+  input_position: 'top'
+  theme: 'light_tritanopia'
+  lang: "en"
 
 
 # Analytics settings
