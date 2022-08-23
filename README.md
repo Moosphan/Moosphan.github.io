@@ -1,12 +1,37 @@
-## Dorck's blog
+> ***Blog address: https://dorck.cn***
 
-此仓库仅用来**分享生活，记录点滴**。同样也作为**备份知识，三省吾身**的界碑。
+### About this article repo
 
-后续文章内容主要包含以下几个方面：
+**分享技术，记录生活**。
 
-- 近期学习规划
-- 文章课题设定
-- 极客分享
-- 产品看法分享
-- 自由职业者思考
-- 相关书籍读后感
+- Based on Jekyll static blog style
+
+- Use [Hux Theme](https://github.com/Huxpro/huxpro.github.io) for rendering
+- Depends on [*Giscus*](https://giscus.app/) to realize comment system
+
+### License
+
+The ownership of the following catalogue belongs to me, and no one may use it without my permission:
+
+- `_posts/`
+- `img/`
+
+For details of the agreement, please refer to [Apache License](./LICENSE).
+
+### How to use
+
+You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+
+1. Installed dependencies in the `Gemfile` : 
+
+   ```
+   $ bundle install 
+   ```
+
+2. Serve the website ( `http://127.0.0.1:4000/` by default ) :
+
+   ```
+   $ bundle exec jekyll serve
+   ```
+
+> ***吾日须三省吾身，不忘青云之志***。
