@@ -35,35 +35,36 @@ task androidSourcesJar(type: Jar) {
 // Because the components are created only during the afterEvaluate phase, you must
 // configure your publications using the afterEvaluate() lifecycle method.
 afterEvaluate {
-	publishing {
-		publications {
-			// Creates a Maven publication called "release".
-			register<MavenPublication>("release") {
-				// Applies the component for the release build variant.
-				from(components["release"])
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            register<MavenPublication>("release") {
+                // Applies the component for the release build variant.
+                from(components["release"])
 
-				artifact(androidSourcesJar)
+                artifact(androidSourcesJar)
 
-				groupId = 'com.example'
-				artifactId = 'custom-library'
-				version = '1.0'
-        
-        pom {
-          //...
-        }
-        repositories {
-            maven {
-                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-                val properties = gradleLocalProperties(rootDir)
-                credentials {
-                    username = properties.getProperty("OSSRH_USERNAME")
-                    password = properties.getProperty("OSSRH_PASSWORD")
+                groupId = 'com.example'
+                artifactId = 'custom-library'
+                version = '1.0'
+
+                pom {
+                    //...
+                }
+                repositories {
+                    maven {
+                        url = version.endsWith('SNAPSHOT') 
+                      ? snapshotsRepoUrl : releasesRepoUrl
+                        val properties = gradleLocalProperties(rootDir)
+                        credentials {
+                            username = properties.getProperty("OSSRH_USERNAME")
+                            password = properties.getProperty("OSSRH_PASSWORD")
+                        }
+                    }
                 }
             }
         }
-			}
-		}
-	}
+    }
 }
 
 ```
@@ -171,7 +172,7 @@ val sourceSets = the<SourceSetContainer>()
 
 ### 插件封装
 
-组件数量较少时，我们上述方式发布也无可厚非。但问题来了，一旦随着我们团队的组件数量持续攀升，每次发布组件都需要关注如此繁杂的配置，这显然会增加出错几率、降低我们的研发效率。因此，我将上述功能封装成一个 [**Gradle 插件**](https://github.com/Moosphan/component-publisher)供其他待发布组件使用，对外屏蔽复杂且重复的发布配置，同时也支持更多组件类型（e.g. Gradle Library）。只需要简单的三步即可帮你完成一切：
+组件数量较少时，我们上述方式发布也无可厚非。但问题来了，一旦随着我们团队的组件数量持续攀升，每次发布组件都需要关注如此繁杂的配置，这显然会增加出错几率、降低我们的研发效率。因此，我将上述功能封装成一个 [**Gradle 插件**](https://github.com/Moosphan/component-publisher) 供其他待发布组件使用，对外屏蔽复杂且重复的发布配置，同时也支持更多组件类型（e.g. Gradle Library）。只需要简单的三步即可帮你完成一切：
 
 ##### 1.引入插件
 
@@ -181,39 +182,28 @@ val sourceSets = the<SourceSetContainer>()
 
 ```groovy
 buildscript {
-    repositories {
-        google()
-        mavenCentral()
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
     }
-    dependencies {
-        classpath 'cn.dorck.android:component-publisher:1.0.0'
-    }
+  }
+  dependencies {
+    classpath "cn.dorck:publish-plugin:1.0.0"
+  }
 }
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-```
 
-> *待发布组件的 build.gradle:*
-
-```groovy
-plugins {
-	id 'cn.dorck.component.publisher'
-}
+apply plugin: "cn.dorck.component.publisher"
 ```
 
 AGP 6.8 及之后项目，可以替换成下面新的方式引入插件：
 
-> *项目根目录 build.gradle:*
+> *待发布项目 build.gradle:*
 
 ```groovy
 plugins {
-    //...
-		id 'cn.dorck.component.publisher' version '1.0.0' apply false
+  id "cn.dorck.component.publisher" version "1.0.0"
 }
 ```
-
-在发布组件中应用插件方式与 6.8 版本之前一致。
 
 ##### 2. 配置发布选项
 
@@ -257,3 +247,12 @@ REPO_SNAPSHOT_URL=https://maven.xx.xx/repository/snapshots/
 ```
 
 如此一来，插件会优先读取待发布组件的 `publishOptions` 中的配置，如果未设置，则会获取项目本地根目录下 `local.properties` 中的配置。
+
+> *开源仓库地址：[component-publisher](https://github.com/Moosphan/component-publisher)*
+
+### 参考
+
+- [*Publish Android library*](https://developer.android.google.cn/studio/build/maven-publish-plugin)
+- [*Gradle maven publish plugin*](https://docs.gradle.org/current/userguide/publishing_maven.html)
+- [*Publishing setup*](https://docs.gradle.org/current/userguide/publishing_setup.html)
+- [*Gradle Plugin publishing*](https://plugins.gradle.org/docs/publish-plugin)
