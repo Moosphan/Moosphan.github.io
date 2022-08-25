@@ -26,26 +26,29 @@ categories:
 首先在 `_includes/` 目录下创建 `gitalk_comment.html` 文件，拷贝内容如下：
 
 ```html
+{% raw %}
 <div id="gitalk-container"></div>
  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
  <script>
  var gitalk = new Gitalk({
-     id: location.pathname,
-     clientID: "{{ site.comments.clientID }}",
-     clientSecret: "{{ site.comments.clientSecret }}",
-     repo: "{{ site.comments.repo }}",
-     owner: "{{ site.comments.owner }}",
-     admin: "{{ site.comments.admin }}", 
+     id: '2022-08-22 00:00:00 +0000',
+     clientID: "{{ site.clientID }}",
+     clientSecret: "{{ site.clientSecret }}",
+     repo: "{{ site.repo }}",
+     owner: "{{ site.owner }}",
+     admin: "{{ site.admin }}", 
      labels: ['Gitalk'],
  })
  gitalk.render('gitalk-container')
- </script>
+ </script> 
+{% endraw %}
 ```
 
 然后在 `_layouts/post.html` 中加入头文件声明并在评论区设置的 Div 中追加如下内容：
 
 ```html
+{% raw %}
 <!--//添加GitTalk评论系统-->
  <link rel="stylesheet" href="/css/gittalk.css">
  <script src="/js/gittalk.min.js"></script>
@@ -61,16 +64,17 @@ categories:
         <script>
                 var gitalk = new Gitalk({
                     id: location.pathname,
-                    clientID: "{{site.comments.clientID}}",
-                    clientSecret: "{{ site.comments.clientSecret }}",
-                    repo: "{{ site.comments.repo }}",
-                    owner: "{{ site.comments.owner }}",
-                    admin: "{{ site.comments.admin }}", 
+                    clientID: "{{site.clientID}}",
+                    clientSecret: "{{ site.clientSecret }}",
+                    repo: "{{ site.repo }}",
+                    owner: "{{ site.owner }}",
+                    admin: "{{ site.admin }}", 
                     labels: ['Gitalk'],
                 })
                 gitalk.render('gitalk-container')
         </script>
     </div>
+{% endraw %}
 ```
 
 最后，只需要在 `_config.yml` 中配置一下 Github repository 等信息即可：
@@ -106,31 +110,41 @@ Giscus 的优点有很多：
 第一步，在 `_includes/` 下创建 `giscus_comment.html` 文件，内容如下：
 
 ```html
+{% raw %}
 <!-- https://giscus.app/ -->
  <script async src="https://giscus.app/client.js"
- 	data-repo="{{ site.giscus.comments.repo }}"
- 	data-repo-id="{{ site.giscus.comments.repo_id }}"
- 	data-category="{{ site.giscus.comments.category }}"
- 	data-category-id="{{ site.giscus.comments.category_id }}"
- 	data-mapping="{{ site.giscus.comments.mapping }}"
+ 	data-repo="{{ site.giscus.repo }}"
+ 	data-repo-id="{{ site.giscus.repo_id }}"
+ 	data-category="{{ site.giscus.category }}"
+ 	data-category-id="{{ site.giscus.category_id }}"
+ 	data-mapping="{{ site.giscus.mapping }}"
  	data-reactions-enabled="1"
  	data-emit-metadata="0"
- 	data-input-position="{{ site.giscus.comments.input_position }}"
- 	data-theme="{{ site.giscus.comments.theme }}"
- 	data-lang="{{ site.giscus.comments.lang }}"
+ 	data-input-position="{{ site.giscus.input_position }}"
+ 	data-theme="{{ site.giscus.theme }}"
+ 	data-lang="{{ site.giscus.lang }}"
      data-loading="lazy"
  	crossorigin="anonymous"
  	async>
  </script> 
+{% endraw %}
 ```
 
-第二步，在 `_layouts/post.html` 中评论区处通过 `include` 引入 `giscus_comment.html` 评论组件。由于静态博客站点会渲染 markdown 中的 html 代码，这里就不放源码了，有疑问的可以直接去参考本人的 [Commit](https://github.com/Moosphan/Moosphan.github.io/commit/60223a078444c6c339f04bc0793c251dd6c6f7e5) 记录。
+第二步，在 `_layouts/post.html` 中评论区处通过 `include` 引入 `giscus_comment.html` 评论组件：
+
+```html
+{% raw %}
+<div class="comment">
+   {% include giscus_comments.html %}
+</div>
+{% endraw %}
+```
 
 最后一步，只需要在 `_config.yml` 中加入 giscus 站点生成的个人 repo 相关配置信息即可：
 
 ```yaml
 # Giscus comment settings
- giscus.comments:
+ giscus:
    repo: "The discussion repository"
    category: "Custom category on github discussion"
    repo_id: "Giscus generated repo id"
