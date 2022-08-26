@@ -143,10 +143,16 @@ friends: [
         title: "Chris Banes",
         href: "https://chris.banes.dev/"
     },{
-        title: "胡凯",
-        href: "https://www.hukai.me/category/android"
+        title: "Bennyhuo",
+        href: "https://www.bennyhuo.com"
     },{
         title: "技术小黑屋",
         href: "https://droidyue.com/"
+    },{
+        title: "森哥",
+        href: "https://johnsonlee.io"
+    },{
+        title: "2BAB",
+        href: "https://2bab.me"
     }
 ]
