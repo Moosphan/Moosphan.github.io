@@ -3,8 +3,8 @@ title: Dorck's Blog
 SEOTitle: 道轲的博客 | Dorck's Blog
 header-img: img/home-bg.jpg
 email: moosphon@gmail.com
-description: "修技术之道，日三省吾身 | App Dev & Freelance Thinker，Hacker Growth | 这里是 @道轲(Dorck) 的个人博客，与你一起探寻世界。"
-keyword: "Dorck, 道轲, moosphan, 道轲的博客, Dorck Blog, Android, 技术, 博客, 个人博客, 专栏, 互联网, 设计, 黑客, 人生观, 设计"
+description: "修技术之道，日三省吾身 | App Dev & Freelance Thinker & Hacker Growth | 这里是 @道轲(Dorck) 的个人博客，与你一起探寻世界。"
+keyword: "Dorck, 道轲, Moosphan, 道轲的博客, Dorck Blog, Android, 技术, 博客, 个人博客, 专栏, 互联网, 设计, 黑客, 人生观, 设计"
 url: "https://dorck.cn"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -98,7 +98,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "道轲，编程语言/开源/极客路上的初行者。 <br> The universe is undecided, we are both dark horses."
-sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/logo.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -154,5 +154,11 @@ friends: [
     },{
         title: "2BAB",
         href: "https://2bab.me"
+    },{
+        title: "LeadroyaL",
+        href: "https://www.leadroyal.cn"
+    },{
+        title: "Yujinyan",
+        href: "https://blog.yujinyan.me"
     }
 ]
