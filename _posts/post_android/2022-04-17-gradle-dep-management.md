@@ -10,7 +10,7 @@ tags:
 - Gradle
 - 依赖管理
 - 开发技巧
-
+categories: Gradle
 ---
 
 日常 Android 开发过程中，我们总需要在各个 module 中依赖各种第三方远程组件，像下面这样：

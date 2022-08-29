@@ -9,7 +9,7 @@ tags:
 
 - 杂谈
 - 学习方法
-categories: 杂谈
+categories: other
 ---
 
 

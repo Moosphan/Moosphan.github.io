@@ -6,10 +6,9 @@ author:     "Dorck"
 catalog: false
 header-style: text
 tags: 
-
 - 工具
 - 奇技淫巧
-
+categories: skill
 ---
 
 去年自从重新下载了 Sublime Text 来作为主要的代码及文本阅读工具后就一直“苦开机自启动问题久矣”，每次开机Sublime Text 都会自动打开一个空的文件，极度影响使用体验（我又不是每次打开电脑都需要用 sublime🤮）。于是乎，稍微 Google 搜索了下如何关闭 Sublime Text 自启动，其实也很简单，此处记录下以防忘记。

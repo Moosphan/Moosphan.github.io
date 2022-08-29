@@ -6,6 +6,7 @@ author:     "Dorck"
 catalog: false
 header-style: text
 tags: Kotlin
+categories: kotlin
 ---
 提到 **`when`**，大家都会联想到 Java 中的 **`switch`**，然而在 kotlin 中，`when` 显然比 Java 中的 `switch` 要强大得多。首先，我们先来看看 when 的特点：
 

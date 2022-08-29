@@ -8,7 +8,7 @@ header-style: text
 tags: 
 - Kotlin
 - Anko
-categories: Kotlin
+categories: kotlin
 ---
 众所周知，目前 kotlin 已经作为 Google 官方推荐的 Android 开发语言，目前 GitHub 上面关于 kotlin 的项目已然呈现一片势不可挡的热度。作为一名 Android 开发者，学好 koltin 已经成为我们必须 get 的技能，而想要在工作中使用 kotlin 快速开发项目，Anko 无疑成为首选利器！
 

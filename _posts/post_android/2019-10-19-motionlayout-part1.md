@@ -8,9 +8,7 @@ header-style: text
 tags: 
 - MotionLayout
 - Android 动画
-categories: 
-- Android
-- 动画
+categories: Android
 ---
 最初接触到 **MotionLayout** 是在国外知名博客的 [Android 专栏](https://medium.com/google-developers)上。第一眼见到 `MotionLayout` 时无疑是兴奋的，在经过使用和熟悉了这个布局组件之后，我就想将这份喜悦传递给国内开发者，从此“拳打”设计，“脚踢”产品😁。当然，由于关于 `MotionLayout` 的外文专栏相关介绍已足够详细，所以本文仅对其进行总结和简单应用。老规矩，正文开始前先上一张图：
 

@@ -8,8 +8,9 @@ header-style: text
 tags: 
   - Android
   - Proguard
+categories: Android
 ---
- 
+
 
 在 Android 日常开发过程中，**混淆**是我们开发 App 的一项必不可少的技能。只要是我们亲身经历过 App 打包上线的过程，或多或少都需要了解一些代码混淆的基本操作。那么，混淆到底是什么？它的好处有哪些？具体效果如何？别急，下面我们来一一探索它的"独特"魅力🐳。
 
@@ -405,5 +406,4 @@ Android 中的四大组件同样不应该被混淆。原因在于：
 - [*Android ProGuard 代码混淆那些事儿*](http://johnnyshieh.me/posts/android-proguard)
 
 - [*Proguard 最全混淆规则说明*](https://juejin.im/entry/6844903474740592647)
-
 

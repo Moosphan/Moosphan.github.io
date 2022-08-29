@@ -6,8 +6,7 @@ author: "Dorck"
 catalog: false
 header-style: text
 tags: Indie
-categories: Indie
-
+categories: indie
 ---
 
 ![indie_hackers_post](/img/in-post/post-other/indie_hackers_post.jpg)

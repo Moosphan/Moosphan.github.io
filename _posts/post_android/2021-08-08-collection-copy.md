@@ -10,9 +10,7 @@ tags:
 - 协程
 - 集合
 - Java
-categories: 
-- Android
-- 协程
+categories: Android
 ---
 
 

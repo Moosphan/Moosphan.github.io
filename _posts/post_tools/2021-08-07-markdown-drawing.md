@@ -9,7 +9,7 @@ tags:
 - 工具
 - 图表绘制
 - 学习方法
-categories: 工具
+categories: tools
 ---
 
 

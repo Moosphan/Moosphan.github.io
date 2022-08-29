@@ -10,7 +10,7 @@ published: false
 tags: 
 - 写作
 - 技术文章
-
+categories: other
 ---
 
 ### Android

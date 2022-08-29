@@ -9,7 +9,7 @@ tags:
 - 操作系统
 - Operation system
 - 计算机基础
-
+categories: computer
 ---
 
 

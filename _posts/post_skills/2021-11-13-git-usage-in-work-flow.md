@@ -12,7 +12,7 @@ tags:
 - 效率工具
 - 命令
 - Git
-categories: 奇技淫巧
+categories: skill
 
 ---
 

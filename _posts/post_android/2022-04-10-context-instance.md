@@ -8,7 +8,7 @@ header-style: text
 tags: 
 - Android
 - Context
-
+categories: Android
 ---
 
 一般来说，App 在运行的时候，势必存在一个 Application 对象，而日常开发中我们离不开 Context，获取资源、启动组件等等都需要这位“管家”的帮助。那么，平时我们是怎么获取 Context 的？

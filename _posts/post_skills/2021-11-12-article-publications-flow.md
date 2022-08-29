@@ -9,7 +9,7 @@ tags:
 
 - 杂谈
 - 文章发布
-categories: 学习技巧
+categories: skill
 
 ---
 

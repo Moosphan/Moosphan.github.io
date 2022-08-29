@@ -8,6 +8,7 @@ header-style: text
 tags: 
   - Kotlin
   - 翻译
+categories: kotlin
 ---
 
 

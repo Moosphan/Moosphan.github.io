@@ -11,7 +11,7 @@ tags:
 - 面试题集
 - 四大组件
 - Activity
-
+categories: Android
 ---
 
 >本文仅用于回顾 Activity 基本知识点，源码解析参考后续源码专栏。

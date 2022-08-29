@@ -11,7 +11,7 @@ tags:
 - 工作技巧
 - 效率工具
 - Linux命令
-categories: 奇技淫巧
+categories: skill
 
 
 ---

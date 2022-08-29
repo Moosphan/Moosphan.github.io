@@ -8,9 +8,7 @@ header-style: text
 tags: 
 - MotionLayout
 - Android 动画
-categories: 
-- Android
-- 动画
+categories: Android
 ---
 距离上一篇文章「 [MotionLayout：打开动画新世界大门(partI)](https://juejin.im/post/5d595328f265da03c34bfa59)」已经过去了很久，由于个人原因，**MotionLayout** 系列文章姗姗来迟。在之前的文章中，我们领略到了 MotionLayout 的魅力，了解到它继承自 *ConstraintLayout*，并具有它“约束布局”的特性。同时，关于如何创建和使用 `MotionScene` 及其内部的 `KeyFrameSet` 也都做了一些简单介绍。那么，本文来带大家进一步探索 **`KeyFrameSet`** 这个大家族中的“神秘宝藏”，并针对上文中留下的一些**彩蛋**进行讲解，来看看**如何实现 MotionLayout 与其他控件的联动**。<!-- more -->
 

@@ -10,7 +10,7 @@ tags:
 - 开发技巧
 - 效率工具
 - Git
-categories: 奇技淫巧
+categories: skill
 
 ---
 

@@ -9,7 +9,7 @@ tags:
 
 - Git
 - 开发规范
-categories: 奇技淫巧
+categories: skill
 
 ---
 

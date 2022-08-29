@@ -7,7 +7,7 @@ catalog: false
 header-style: text
 tags: 
 - Kotlin
-categories: Kotlin
+categories: kotlin
 ---
 
 Kotlin 中有个所谓的伴生对象（companion object），一般使用过程中我们会将它作为 Java 静态成员使用方式的替代品：
