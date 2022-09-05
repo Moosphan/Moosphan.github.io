@@ -165,21 +165,6 @@ $ ./gradlew :<ready_published_library_module>:publishMavenPubPublicationToMavenR
 
 如果是发布普通的 Library 组件（e.g. Android-library、kotlin-library、java-library）发布到 Maven Central 即可万事大吉了。虽然 Gradle plugin 发布到 Maven Central 同样能用，但对于我个人的使用体验来说还是远远不够。升级到 AGP 6.8 后，我们需要这么使用自定义插件：
 
-> *rootProject/build.gradle:*
-
-```groovy
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath 'cn.dorck.android:component-publisher:1.0.0'
-    }
-}
-```
-
 > *settings.gradle:*
 
 ```groovy
@@ -190,9 +175,10 @@ pluginManagement {
         mavenCentral()
         mavenLocal()
     }
+   // Resolution strategy for plugins without Plugin Marker Artifact
     resolutionStrategy {
         eachPlugin {
-            if (requested.id.id == 'cn.dorck.component.publisher') {
+            if (requested.id.id == 'component-publisher') {
                 useModule("com.dorck.android.plugin:component-publisher:1.0.0")
             }
         }
@@ -204,7 +190,7 @@ pluginManagement {
 
 ```groovy
 plugins {
-  id "cn.dorck.component.publisher" version "1.0.0"
+  id "component-publisher" version "1.0.0"
 }
 ```
 
