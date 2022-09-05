@@ -5,7 +5,6 @@ date: 2022-09-06 09:30:00
 author:     "Dorck"
 catalog: false
 header-style: text
-published: false
 tags: 
 - Maven Publishing
 - Maven Central
