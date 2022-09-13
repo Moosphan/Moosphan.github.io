@@ -136,7 +136,7 @@ signing {
 
 并在项目根目录下的 `gradle.properties` 中添加签名密钥信息：
 
-```groovy
+```properties
 signing.keyId=ABCDEFGH
 signing.password=pwd1234
 signing.secretKeyRingFile=C:/Users/John.Doe/AppData/Roaming/gnupg/secring.gpg
