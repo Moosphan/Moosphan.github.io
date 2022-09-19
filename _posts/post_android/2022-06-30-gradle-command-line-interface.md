@@ -387,19 +387,75 @@ $ ./gradlew test --continue
 
 当使用 `--continue` 选项执行构建时，Gradle 将执行构建过程中依赖的每个任务，其中每个任务都会执行完成且并不会因为失败而终止，过程中遇到的每个故障都会在构建结束后生成最终报告。值得注意的是，某个任务一旦执行失败，那么依赖该 task 的其他任务将不会被执行。
 
-### 部分内置 task 及选项说明
-
-##### 1. 构建所有输出
+##### 7. 构建所有输出
 
 在 Gradle 构建中，`build` 任务通常指定组装所有输出并运行所有检查。
 
-##### 2. 检查任务
+##### 8. check系列任务
 
 通常，所有验证任务（包括测试和 lint）都使用 `check` 任务来执行。
 
-##### 3. 查看依赖报告
+### 环境选项
 
-`--scan` 选项配置提供了一个完整的可视化报告链接，说明该次构建过程中各个配置中依赖关系、传递依赖关系和依赖关系版本选项等。
+我们可以通过以下选项来自定义构建脚本、设置、缓存等的许多方面配置。
+
+| 环境选项                     | 相关说明                                                     |
+| ---------------------------- | ------------------------------------------------------------ |
+| `-g` 或 `--gradle-user-home` | 指定 Gradle 用户主目录。 默认是用户主目录中的 `.gradle` 目录。 |
+| `-p` 或 `--project-dir`      | 指定 Gradle 的起始目录。 默认为当前目录。                    |
+| `--project-cache-dir`        | 指定项目特定的缓存目录。 默认为项目根目录中的 `.gradle`。    |
+| `-D` 或 `--system-prop`      | 设置 JVM 的系统属性，例如 -Dmyprop=myvalue。                 |
+| `-I` 或 `--init-script`      | 指定初始化脚本。                                             |
+| `-P` 或 `--project-prop`     | 设置根项目的项目属性，例如 `-Pmyprop=myvalue`。              |
+| `-Dorg.gradle.jvmargs`       | 设置 JVM 参数。                                              |
+| `-Dorg.gradle.java.home`     | 设置 Java home 路径。                                        |
+
+### 调试选项
+
+很多时候我们写 Gradle 插件希望开启调试模式，方便我们排查代码。首先，需要点击 `Edit configurations` 后点击右上角 `+` 选择 `Remote JVM Debug` 模块创建一个调试模块：
+
+<img src="/img/in-post/post-android/gradle_plugin_debug.png" alt="gradle_plugin_debug" style="zoom:50%;" />
+
+接着，在 Android studio 终端输入以下命令即可调试 Gradle 客户端进程。默认情况下，Gradle 将等待我们在 `localhost：5005` 上附加调试器：
+
+```
+$ ./gradlew build -Dorg.gradle.debug=true
+```
+
+最后，只需要添加断点并点击工具栏 `Debug [process name]` 即可，可通过 CMD+D 快捷开启。
+
+Gradle 还提供了如下命令来设置调试选项：
+
+| 调试选项                                    | 说明                                                         |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| *`-Dorg.gradle.debug=true`*                 | 调试 Gradle 客户端（非守护进程）进程。 Gradle 默认会在 `localhost:5005` 端口等待附加一个调试器。 |
+| *`-Dorg.gradle.debug.port=(port number)`*   | 指定启用调试时要侦听的端口号。 默认值为 5005。               |
+| *`-Dorg.gradle.debug.server=(true,false)`*  | 如果设置为 true 并启用调试，Gradle 将使用调试器的套接字连接模式运行构建。 否则，使用套接字侦听模式。 默认为 true。 |
+| *`-Dorg.gradle.debug.suspend=(true,false)`* | 当设置为 true 并启用调试时，运行 Gradle 的 JVM 将挂起，直到附加调试器。 |
+| *`-Dorg.gradle.daemon.debug=true`*          | 调试 Gradle 守护进程。                                       |
+
+### 性能选项
+
+我们可以在优化构建性能时尝试以下选项（这些选项也同样支持在 `gradle.properties` 中配置）：
+
+| 性能选项                                                   | 相关说明                                                     |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+| `--build-cache` 或 `--no-build-cache`                      | 是否开启 Gradle 构建缓存。 若开启，Gradle 将尝试重用以前构建的输出。 默认为关闭。 |
+| `--configuration-cache` 或 `--no-configuration-cache`      | 是否启用配置缓存。 若开启，Gradle 将尝试重用以前的构建配置。 默认为关闭。 |
+| `--configuration-cache-problems=(fail,warn)`               | 设置构建缓存如何处理构建失败问题，若设置为 fail，则使构建任务失败并且报告问题；若设置 warn，则仅报告问题而不将构建过程终止。默认为 fail。 |
+| `--configure-on-demand` 或 `--no-configure-on-demand`      | 切换按需配置。 在此构建运行中仅配置相关项目。 默认为关闭。   |
+| `--max-workers`                                            | 设置 Gradle 可以使用的最大工作线程数。 默认为处理器数量。    |
+| `--parallel` 或 `--no-parallel`                            | 是否开启并行构建项目。 默认为关闭。                          |
+| `--priority`                                               | 指定 Gradle 守护程序及其启动的所有进程的调度优先级。 数值为 normal 或 low。 默认为 normal。 |
+| `--profile`                                                | 在 `buildDir/reports/profile` 目录中生成高级性能报告。       |
+| `--watch-fs`, `--no-watch-fs`                              | 是否启用文件监视器，启用后，Gradle 会重复使用它在构建之间收集的有关文件系统的信息。 在 Gradle 支持此功能的操作系统上默认启用。 |
+| `--daemon` 或 `--no-daemon`                                | 使用 Gradle 守护程序运行构建。 如果未运行或现有守护程序忙，则启动守护程序。 默认开启。 |
+| `--foreground`                                             | 在前台进程中启动 Gradle 守护进程。                           |
+| `--status`                                                 | 运行 `gradle --status` 列出正在运行和最近停止的 Gradle 守护程序。 仅显示相同 Gradle 版本的守护进程。 |
+| `--stop`                                                   | 运行 `gradle --stop` 停止所有相同版本的 Gradle 守护进程。    |
+| `-Dorg.gradle.daemon.idletimeout=(number of milliseconds)` | Gradle Daemon 将在此毫秒数的空闲时间后自行停止。 默认值为 10800000（3 小时）。 |
+
+此外，我们可以借助 `--scan` 选项来输出一个完整的可视化报告链接，说明该次构建过程中各个配置中依赖关系、传递依赖关系和构建性能相关数据等。
 
 ```
 ➜  Minos ./gradlew assemble --scan
@@ -423,9 +479,13 @@ https://gradle.com/s/a2nqu2n3jech2
 
 <img src="/img/in-post/post-android/gradle_cmd_scan_dep.png" alt="gradle_cmd_scan_dep" style="zoom:50%;" />
 
-##### 4. 日志选项
 
-我们可以使用以下选项自定义 Gradle 日志记录的详细程度。首先是设置全局日志输出级别的默认配置：
+
+### 日志选项
+
+我们可以通过 `-S` 或者`--full-stacktrace` 来打印出任何异常的完整（非常详细的）堆栈跟踪；也可以使用 `-s` 或者 `--stacktrace` 来打印用户异常的堆栈跟踪（例如编译错误）。
+
+另外，我们还可以使用以下选项自定义 Gradle 日志记录的详细程度。首先是设置全局日志输出级别的默认配置：
 
 - `-Dorg.gradle.logging.level=(quiet,warn,lifecycle,info,debug)`
 
@@ -443,20 +503,6 @@ https://gradle.com/s/a2nqu2n3jech2
 也可以同样指定单次构建过程的日志输出格式：
 
 - `--console=(auto,plain,rich,verbose)`
-
-##### 5. Gradle 开启调试模式
-
-很多时候我们写 Gradle 插件希望开启调试模式，方便我们排查代码。首先，需要点击 `Edit configurations` 后点击右上角 `+` 选择 `Remote JVM Debug` 模块创建一个调试模块：
-
-<img src="/img/in-post/post-android/gradle_plugin_debug.png" alt="gradle_plugin_debug" style="zoom:50%;" />
-
-接着，在 Android studio 终端输入以下命令即可调试 Gradle 客户端进程。默认情况下，Gradle 将等待我们在 `localhost：5005` 上附加调试器：
-
-```
-$ ./gradlew build -Dorg.gradle.debug=true
-```
-
-最终，只需要添加断点并点击工具栏 `Debug [process name]` 即可，可通过 CMD+D 快捷开启。
 
 ### 参考
 
