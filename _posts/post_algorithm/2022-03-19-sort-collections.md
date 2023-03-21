@@ -101,7 +101,7 @@ int[] insertionSort(int[] array, int n) {
 
 **图解：**
 
-<img src="/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/selection_sort.png" alt="selection_sort" style="zoom:67%;" />
+<img src="/img/in-post/post-algo/selection_sort.png" alt="selection_sort" style="zoom:67%;" />
 
 **Java 代码实现：**
 
@@ -148,7 +148,7 @@ p >= r
 
 **图解：**
 
-<img src="/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/quick_sort.png" alt="quick_sort" style="zoom: 50%;" />
+<img src="/img/in-post/post-algo/quick_sort.png" alt="quick_sort" style="zoom: 50%;" />
 
 **Java 代码实现：**
 
@@ -206,7 +206,7 @@ p >= r 不用再继续分解
 
 **图解：**
 
-![merge_sort](/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/merge_sort.png)
+![merge_sort](/img/in-post/post-algo/merge_sort.png)
 
 **Java 代码实现：**
 
@@ -271,7 +271,7 @@ p >= r 不用再继续分解
 
 **图解：**
 
-![counting_sort](/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/counting_sort.png)
+![counting_sort](/img/in-post/post-algo/counting_sort.png)
 
 **Java 代码实现：**
 
@@ -321,7 +321,7 @@ public class CountingSort {
 
 **图解：**
 
-![radix_sort](/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/radix_sort.png)
+![radix_sort](/img/in-post/post-algo/radix_sort.png)
 
 **Java 代码实现：**
 
@@ -393,7 +393,7 @@ public class RadixSort {
 
 **图解：**
 
-![shell_sort](/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/shell_sort.png)
+![shell_sort](/img/in-post/post-algo/shell_sort.png)
 
 **Java 代码实现：**
 
@@ -421,7 +421,7 @@ public void shellSort(int[] arrays) {
 
 ### 总结
 
-![sort_categories.jpg](/Users/dorck/github/Moosphan.github.io/img/in-post/post-algo/sort_categories.png)
+![sort_categories.jpg](/img/in-post/post-algo/sort_categories.png)
 
 ### 更多
 
