@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android系统中关于/proc目录的点滴"
-date: 2023-03-27 08:23:00
+date: 2023-03-27 20:23:00
 author:     "Dorck"
 catalog: false
 header-style: text
