@@ -12,7 +12,7 @@ tags:
 catrgories: Algorithm
 ---
 
-本文是对于 [常用排序算法合集](2022-03-19-sort-collections.md) 的扩展应用。
+本文是对于 [常用排序算法合集](https://dorck.cn/2022/03/19/sort-collections/) 的扩展应用。
 
 ### 题目内容
 
