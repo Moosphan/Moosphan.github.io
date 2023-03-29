@@ -440,9 +440,14 @@ Copy code
 
 这些文件可以作为系统管理员和开发者了解系统运行状态和调优的有力工具，也可以被用来分析和诊断一些问题。同时，需要注意的是访问这些文件可能需要具有相应权限，且在使用时应特别小心，防止误操作。
 
+### 版本兼容问题
+
+值得注意的是，Android 8.0 开始，Google 开始限制应用访问 /proc/stat 等文件，只有系统应用方可访问，当前应用访问时会提示权限错误，具体参考 Google 的 issue tracker 描述：https://issuetracker.google.com/issues/37140047。针对 Android 8.0 开始的版本，如果想获取 CPU 运行数据可以参考 */sys/devices/system/cpu/* 目录下的信息，它提供了CPU的一些详细配置及活动信息，如 CPU 最小、最大频率、CPU 各频率活动时间、CPU Idle累计时间等。
+
 ### 参考
 
 - [*Linux Man Paegs Of proc*](https://man7.org/linux/man-pages/man5/proc.5.html)
+- [Android 高版本采集系统CPU使用率的方式](https://mp.weixin.qq.com/s/8r5jzV7sqgy7ZynUg5V7mA)
 
 ### Thanks
 
