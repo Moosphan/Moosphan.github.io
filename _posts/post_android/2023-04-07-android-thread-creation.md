@@ -15,6 +15,8 @@ categories:
 
 我们都知道，Android 中线程创建过程需要追溯到 Native 层面，最终是委托给一个 Linux 标准线程 pthread 来执行的，所以 Android 中线程状态本质上是 Native 线程的一种映射。Android 中运行的线程可以分为两种：一种是 attach 到虚拟机的，即虚拟机线程；另一种是没有 attach 到虚拟机的。今天我们就分别从源码层面来看看 Android 系统中 Java 和 Native 层线程的创建过程。
 
+> *以下分析基于 [Android 13 最新源码](https://cs.android.com)。*
+
 ### Java 线程创建过程
 
 首先，我们需要知道的是：当我们通过 `new` 关键字创建一个 Thread 时其实并没有真正创建一个线程，只有调用 `start` 方法后才会去创建线程。先来看下 `start` 方法内部实现：
@@ -612,6 +614,12 @@ bool Runtime::AttachCurrentThread(const char* thread_name, bool as_daemon, jobje
 ```
 
 这里其实就是将线程在 JavaVM 层面包装成一个 VM 上的线程再返回给 self。接下来就不继续往下深究了，篇幅有限，本文先讲到这里，里面还涉及到很多 JavaVM 相关的细节及原理将在后续文章中做一个补充。
+
+顺带提一嘴，Android SDK 中的 Thread 与 JDK 中的 java.lang.Thread 实际上是有区别的，虽然 Android 也使用 Java 语言开发，但Android 基于平台特殊性对 JDK 进行了一些删减和改造。我们都知道 Java 是具有跨平台特性的，同一套代码它完全可以在 Windows、Linux 等操作系统上正常运作，但其实内部的线程创建等细节是基于 OS 的特性进行各自实现的：
+
+![java_thread_creation](/img/in-post/post-android/java_thread_creation.png)
+
+> 想了解更多关于 Java 线程的启动过程可以参考[此文](https://zhuanlan.zhihu.com/p/439797698)。
 
 ### 总结
 
