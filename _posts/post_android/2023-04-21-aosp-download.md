@@ -161,4 +161,4 @@ repo: Updating release signing keys to keyset ver 2.3
 
 ## 参考
 
-- [*代号、标记和 build 号  | Android 开源项目  | Android Open Source Project (google.cn)*](https://source.android.google.cn/docs/setup/about/build-numbers?hl=zh-cn#source-code-tags-and-builds)
+- [*AOSP 中的代号、标记和 build 号*](https://source.android.google.cn/docs/setup/about/build-numbers?hl=zh-cn#source-code-tags-and-builds)
