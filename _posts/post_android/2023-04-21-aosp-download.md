@@ -5,7 +5,6 @@ date: 2023-04-21 14:15:00
 author:     "Dorck"
 catalog: false
 header-style: text
-published: false
 tags: 
 - repo
 - framework
@@ -135,7 +134,7 @@ fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle
 fatal: error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)
 ```
 
-我们需要执行一下 Python 安装包下的 `Install Certificates.command` 脚本来安装证书，然后重新执行上述命令：
+我们需要执行一下 Python 安装包下的 `Install Certificates.command` 脚本来安装证书，然后重新执行上述 init 命令：
 
 ```
 Downloading Repo source from https://mirrors.tuna.tsinghua.edu.cn/git/git-repo
