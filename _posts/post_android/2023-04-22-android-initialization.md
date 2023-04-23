@@ -840,8 +840,8 @@ system_server 进程运行相关日志：
 
 基于记录以上关键日志的目的，我们可以通过以下 logcat 命令在手机开机后使用：
 
-- *adb logcat -b events |grep “boot_progress”*
-- *adb logcat -s Zygote|SystemServer|SystemServiceManager|ActivityManager*
+- *`adb logcat -b events |grep “boot_progress”`*
+- *`adb logcat -s Zygote|SystemServer|SystemServiceManager|ActivityManager`*
 
 ### 总结
 
