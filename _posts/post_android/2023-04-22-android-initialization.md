@@ -5,14 +5,13 @@ date: 2023-04-22 10:15:00
 author:     "Dorck"
 catalog: false
 header-style: text
-published: false
 tags: 
 - APP启动
 - 源码分析
 catrgories: Android
 ---
 
-Android 手机从长按开机到应用的启动阶段都经历了些什么呢？Android 启动过程涉及一系列操作，首先是启动 ROM，接着是引导加载程序、内核启动、init、Zygote 和 SystemServer 创建。其中涉及到虚拟机的启动、Binder 线程池的创建以及各项系统服务启动等过程。熟悉 APP 启动过程还可以帮助我们打破性能优化瓶颈，助力于启动性能的提升。下面是启动过程涉及到的关键进程和服务：
+Android 手机从长按开机到应用的启动阶段都经历了些什么呢？Android 启动过程涉及一系列操作，首先是启动 ROM，接着是引导加载程序、内核启动、init、Zygote 和 SystemServer 创建等过程。整个过程涉及到虚拟机的启动、Binder 线程池的创建以及各项系统服务启动等过程。熟悉 APP 启动过程还可以帮助我们打破性能优化瓶颈，助力于启动性能的提升。下面是启动过程涉及到的关键进程和服务：
 
 <img src="/img/in-post/post-android/android_init_brief.png" alt="android_init_brief" style="zoom:70%;" />
 
