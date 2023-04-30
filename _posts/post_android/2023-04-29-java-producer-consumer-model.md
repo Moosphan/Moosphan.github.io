@@ -191,4 +191,4 @@ public class GoodsStorageDispatcher {
 ### 相关参考
 
 - [*wait()方法为什么要放在while循环里面-虚假唤醒*](https://blog.csdn.net/thetimelyrain/article/details/107209101)
-- [*深入理解Java系列 | BlockingQueue用法详解*](https://juejin.cn/post/6999798721269465102)
+- [*深入理解 BlockingQueue*](https://juejin.cn/post/6999798721269465102)
