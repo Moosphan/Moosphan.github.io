@@ -15,6 +15,8 @@ catrgories: Android
 
 上一篇[文章](https://dorck.cn/2023/04/22/android-initialization/)我们对 Android 系统启动过程做了一定了解，本文将继续分析 Launcher 进程的启动流程。
 
+> 本文基于 Android 13 最新代码来进行源码分析。
+
 ### Launcher 进程启动
 
 上文中，我们最终谈到了 `system_server` 进程的创建过程，并且该进程主要负责：
@@ -2396,5 +2398,5 @@ Android 中在 system_server 进程启动 Launcher 进程主要有以下几个�
 
 - https://juejin.cn/post/6978743408756162590
 - https://blog.csdn.net/zhuzp_blog/article/details/120894309
-- https://blog.csdn.net/wangww631/article/details/78413815
+- https://blog.csdn.net/qq_34512207/article/details/113725772
 
