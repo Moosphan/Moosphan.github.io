@@ -1,0 +1,7 @@
+interface:
+  display_name: "Blog Post Publisher"
+  short_description: "Create or publish Jekyll blog posts from natural language"
+  default_prompt: "Use $blog-post-publisher to create, update, or publish a post in this Jekyll blog repository."
+
+policy:
+  allow_implicit_invocation: true

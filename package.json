@@ -19,6 +19,8 @@
     "scripts": {
         "start": "bundle exec jekyll serve -w -l --host 0.0.0.0",
         "dev": "grunt watch & npm run start",
+        "blog-post": "node ./tools/blog-post-skill/bin/blog-post-skill.js",
+        "blog-post:test": "node --test ./tools/blog-post-skill/test/*.test.js",
         "boil": "git push boilerplate boilerplate:master",
         "push": "git push origin master --tag"
     }
