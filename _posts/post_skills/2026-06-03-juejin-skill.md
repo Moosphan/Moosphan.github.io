@@ -2,7 +2,7 @@
 layout: post
 title: "把文章发布到掘金，做成一个可复用的 juejin-skill"
 description: "围绕 juejin-skill 的 CLI 分层、登录复用、图片上传、更新同步与多 Agent 适配，完整复盘一套可复用掘金发文 skill 的实现。"
-date: 2026-05-24 12:59:00
+date: 2026-06-03 12:59:00
 author: "Dorck"
 catalog: false
 header-style: text
